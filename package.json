@@ -1,0 +1,29 @@
+{
+  "name": "emoji-pane",
+  "version": "0.0.1",
+  "description": "An emoji keyboard for any input field",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eliasmeire/emoji-pane.git"
+  },
+  "keywords": [
+    "emoji",
+    "keyboard",
+    "pane",
+    "panel",
+    "input",
+    "field",
+    "react",
+    "component"
+  ],
+  "author": "Elias Meire",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/eliasmeire/emoji-pane/issues"
+  },
+  "homepage": "https://github.com/eliasmeire/emoji-pane#readme"
+}
