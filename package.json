@@ -25,5 +25,12 @@
   "bugs": {
     "url": "https://github.com/eliasmeire/emoji-pane/issues"
   },
-  "homepage": "https://github.com/eliasmeire/emoji-pane#readme"
+  "homepage": "https://github.com/eliasmeire/emoji-pane#readme",
+  "devDependencies": {
+    "@kadira/storybook": "^2.35.2"
+  },
+  "dependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  }
 }
