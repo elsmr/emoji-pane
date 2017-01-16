@@ -1,1 +1,0 @@
-# Emoji pane (WIP)
