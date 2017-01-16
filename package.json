@@ -32,16 +32,30 @@
   "homepage": "https://github.com/eliasmeire/emoji-pane#readme",
   "devDependencies": {
     "@kadira/storybook": "^2.35.3",
+    "babel-jest": "^18.0.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "enzyme": "^2.7.0",
     "eslint": "^3.13.1",
     "eslint-config-airbnb": "^14.0.0",
     "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jest": "^1.0.2",
     "eslint-plugin-jsx-a11y": "^3.0.2",
     "eslint-plugin-react": "^6.9.0",
-    "gh-pages-travis": "^1.0.0"
+    "gh-pages-travis": "^1.0.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^18.1.0",
+    "react-addons-test-utils": "^15.4.2",
+    "react-test-renderer": "^15.4.2"
   },
   "dependencies": {
     "mousetrap": "^1.6.0",
     "react": "^15.4.2",
     "react-dom": "^15.4.2"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(css|scss)$": "identity-obj-proxy"
+    }
   }
 }
