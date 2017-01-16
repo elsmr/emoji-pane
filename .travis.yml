@@ -4,6 +4,7 @@ cache:
   directories:
   - node_modules
 after_success:
+- npm run build-storybook
 - npm run deploy-storybook
 env:
   global:
