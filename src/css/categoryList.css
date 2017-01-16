@@ -1,0 +1,7 @@
+.category-list {
+  overflow-y: auto;
+}
+
+.category-list::-webkit-scrollbar {
+  display: none;
+}
