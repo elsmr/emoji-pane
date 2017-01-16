@@ -18,5 +18,3 @@ branches:
 before_install:
 - openssl aes-256-cbc -K $encrypted_1af885ae15af_key -iv $encrypted_1af885ae15af_iv
   -in key.enc -out key -d
-- openssl aes-256-cbc -K $encrypted_1af885ae15af_key -iv $encrypted_1af885ae15af_iv
-  -in key.enc -out ~\/Dev/key -d
