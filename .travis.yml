@@ -12,7 +12,7 @@ env:
   - GIT_NAME="Elias Meire"
   - GIT_EMAIL="me@eliasmei.re"
   - SOURCE_DIR="storybook-static"
-  - DEPLOY_BRANCH="gh-pages"
+  - DEPLOY_BRANCH="master"
 branches:
   except:
   - gh-pages
