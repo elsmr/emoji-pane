@@ -1,8 +1,0 @@
-# Logs
-*.log
-
-# Dependencies
-node_modules
-
-# Storybook output
-storybook-static
