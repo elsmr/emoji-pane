@@ -1,8 +1,8 @@
 {
   "name": "emoji-pane",
   "version": "0.0.1",
-  "description": "An emoji keyboard for any input field",
-  "main": "index.js",
+  "description": "An emoji keyboard for react",
+  "main": "src/EmojiPane.js",
   "scripts": {
     "test": "jest",
     "storybook": "start-storybook -p 6006",
