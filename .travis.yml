@@ -6,7 +6,7 @@ cache:
   directories:
     - node_modules
 after_sucess:
-  - npm run gh-pages-travis
+  - npm run deploy-storybook
 env:
   global:
     - SSH_KEY="key"
