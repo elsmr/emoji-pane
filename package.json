@@ -4,7 +4,10 @@
   "description": "An emoji keyboard for any input field",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "lint": "eslint --ext .js,.jsx src test"
   },
   "repository": {
     "type": "git",
@@ -27,9 +30,15 @@
   },
   "homepage": "https://github.com/eliasmeire/emoji-pane#readme",
   "devDependencies": {
-    "@kadira/storybook": "^2.35.2"
+    "@kadira/storybook": "^2.21.0",
+    "eslint": "^3.13.1",
+    "eslint-config-airbnb": "^14.0.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^3.0.2",
+    "eslint-plugin-react": "^6.9.0"
   },
   "dependencies": {
+    "mousetrap": "^1.6.0",
     "react": "^15.4.2",
     "react-dom": "^15.4.2"
   }
