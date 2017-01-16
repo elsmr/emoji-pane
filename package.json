@@ -5,9 +5,10 @@
   "main": "src/EmojiPane.js",
   "scripts": {
     "test": "jest",
+    "lint": "eslint --ext .js,.jsx src test",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "lint": "eslint --ext .js,.jsx src test"
+    "deploy-storybook": "gh-pages-travis"
   },
   "repository": {
     "type": "git",
@@ -35,7 +36,8 @@
     "eslint-config-airbnb": "^14.0.0",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^3.0.2",
-    "eslint-plugin-react": "^6.9.0"
+    "eslint-plugin-react": "^6.9.0",
+    "gh-pages-travis": "^1.0.0"
   },
   "dependencies": {
     "mousetrap": "^1.6.0",
