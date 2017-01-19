@@ -8,7 +8,7 @@ const CategorySwitcher = ({ categories }) => (
         categories
           .map(cat => (
             <li key={cat.name}>
-              <a className="category-switcher__item" href={`#${cat.name}`}>{cat.icon}</a>
+              <a title={cat.desc} className="category-switcher__item" href={`#${cat.name}`}>{cat.icon}</a>
             </li>
           ))
       }

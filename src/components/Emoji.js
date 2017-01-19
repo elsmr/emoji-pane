@@ -5,7 +5,7 @@ import '../css/emoji.css';
 const Emoji = ({ type, emoji, onSelected, selected }) => {
   if (type === NATIVE) {
     return (
-      <span className={selected ? 'emoji emoji--selected' : 'emoji'} onClick={() => { onSelected(emoji); }}>
+      <span title={emoji.desc} className={selected ? 'emoji emoji--selected' : 'emoji'} onClick={() => { onSelected(emoji); }}>
         {emoji.char}
       </span>
     );

@@ -9,7 +9,7 @@ const CategoryList = ({ allEmojiByCategory, onSelected }) => (
         .map(cat =>
           <EmojiCategory
             key={cat.name}
-            title={cat.name}
+            title={cat.desc}
             emojiByCategory={cat.emoji}
             onSelected={onSelected}
           />)

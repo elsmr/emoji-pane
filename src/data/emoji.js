@@ -5,5 +5,6 @@ export { allByCat };
 export const categories = allByCat
   .map(el => ({
     name: el.name,
+    desc: el.desc,
     icon: el.icon,
   }));
