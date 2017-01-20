@@ -1,9 +1,14 @@
 import React from 'react';
 import '../css/categorySwitcher.css';
 
-const CategorySwitcher = ({ categories }) => (
+const CategorySwitcher = ({ categories, recentsEnabled }) => (
   <div>
     <ul className="category-switcher">
+      { recentsEnabled &&
+        <li key="recents">
+          <a title="Recents" className="category-switcher__item" href="#recents">🕓</a>
+        </li>
+      }
       {
         categories
           .map(cat => (
@@ -18,6 +23,7 @@ const CategorySwitcher = ({ categories }) => (
 
 CategorySwitcher.propTypes = {
   categories: React.PropTypes.array.isRequired,
+  recentsEnabled: React.PropTypes.bool.isRequired,
 };
 
 export default CategorySwitcher;
