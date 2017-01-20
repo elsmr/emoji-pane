@@ -3,12 +3,10 @@
   flex-direction: row;
   flex-wrap: wrap;
   max-width: 100%;
+  height: inherit;
   overflow-y: auto;
-  justify-content: space-around;
-}
-
-.emoji-panel__list::-webkit-scrollbar {
-  display: none;
+  justify-content: flex-start;
+  margin: 0 auto;
 }
 
 .emoji-panel__list__message {

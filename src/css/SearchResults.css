@@ -1,0 +1,7 @@
+.emoji-pane__results {
+  overflow-y: auto;
+}
+
+.emoji-pane__results::-webkit-scrollbar {
+  display: none;
+}
