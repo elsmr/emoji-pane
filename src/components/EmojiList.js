@@ -2,7 +2,7 @@ import React from 'react';
 import Emoji from './Emoji';
 import '../css/emojiList.css';
 
-const EmojiList = ({ emojis, onSelected, selectedIndex }) => (
+const EmojiList = ({ emojis, onSelected, selectedIndex, skinTone }) => (
   <div className="emoji-panel__list">
     {emojis.length > 0 ?
       (
@@ -13,6 +13,7 @@ const EmojiList = ({ emojis, onSelected, selectedIndex }) => (
               key={emoji.name}
               onSelected={onSelected}
               emoji={emoji}
+              skinTone={skinTone}
             />))
       ) : (
         <p className="emoji-panel__list__message">No emoji found <span>😢</span></p>
@@ -25,6 +26,7 @@ EmojiList.propTypes = {
   emojis: React.PropTypes.array.isRequired,
   onSelected: React.PropTypes.func.isRequired,
   selectedIndex: React.PropTypes.number,
+  skinTone: React.PropTypes.number.isRequired,
 };
 
 EmojiList.defaultProps = {
