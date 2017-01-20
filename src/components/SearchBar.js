@@ -16,6 +16,13 @@ const SearchBar = ({ filter, onFilter, onSelected }) => (
           }
         }
       }
+      onKeyDown={
+        (e) => {
+          if (e.keyCode === 39 || e.keyCode === 40) {
+            e.target.blur();
+          }
+        }
+      }
       placeholder="Search emoji..."
       autoFocus
     />
