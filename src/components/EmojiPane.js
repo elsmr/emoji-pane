@@ -1,17 +1,24 @@
 import React from 'react';
 import Mousetrap from 'mousetrap';
 import SearchBar from './SearchBar';
-import EmojiList from './EmojiList';
+import SearchResults from './SearchResults';
 import CategoryList from './CategoryList';
 import CategorySwitcher from './CategorySwitcher';
 import { all, allByCat, categories } from '../data/emoji';
-import { matches } from '../utils/emoji';
+import { matches, queue } from '../utils/emoji';
 import '../css/emojiPane.css';
 
 class EmojiPane extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { searching: props.filter !== '', filter: props.filter, results: all, selectedIndex: 0 };
+    this.state = {
+      searching: props.filter !== '',
+      filter: props.filter,
+      results: all,
+      selectedIndex: 0,
+      skinTone: props.skinTone,
+      recents: props.recents.slice(0, props.recentsSize),
+    };
     this.onSelected = this.onSelected.bind(this);
     this.onFilter = this.onFilter.bind(this);
     this.selectNext = this.selectNext.bind(this);
@@ -21,7 +28,7 @@ class EmojiPane extends React.Component {
   componentDidMount() {
     Mousetrap.bind('right', this.selectNext);
     Mousetrap.bind('left', this.selectPrev);
-    Mousetrap.bind('enter', () => this.onSelected());
+    Mousetrap.bind('enter', this.onSelected);
   }
 
   componentWillUnmount() {
@@ -29,7 +36,8 @@ class EmojiPane extends React.Component {
   }
 
   onSelected(emoji) {
-    const { results, selectedIndex } = this.state;
+    const { results, selectedIndex, recents } = this.state;
+    this.setState({ recents: queue(recents, this.props.recentsSize, emoji) });
     this.props.onSelected(emoji || results[selectedIndex]);
   }
 
@@ -57,39 +65,50 @@ class EmojiPane extends React.Component {
   }
 
   render() {
-    const { selectedCategory } = this.props;
-    const { searching, filter, results, selectedIndex } = this.state;
+    const { searching, filter, results, selectedIndex, skinTone, recents } = this.state;
     return (
       <div className="emoji-pane">
         <SearchBar filter={filter} onFilter={this.onFilter} onSelected={this.onSelected} />
         { searching ?
           (
-            <EmojiList
-              onSelected={this.onSelected}
-              emojis={results}
+            <SearchResults
               selectedIndex={selectedIndex}
+              results={results}
+              onSelected={this.onSelected}
+              skinTone={skinTone}
             />
           ) :
           (
-            <CategoryList onSelected={this.onSelected} allEmojiByCategory={allByCat} />
+            <CategoryList
+              recents={recents}
+              onSelected={this.onSelected}
+              allEmojiByCategory={allByCat}
+              skinTone={skinTone}
+            />
           )
         }
-        <CategorySwitcher categories={categories} selected={selectedCategory} />
+        { !searching &&
+          <CategorySwitcher categories={categories} recentsEnabled={recents.length !== 0} />
+        }
       </div>
     );
   }
 }
 
 EmojiPane.propTypes = {
-  selectedCategory: React.PropTypes.string,
   filter: React.PropTypes.string,
   onSelected: React.PropTypes.func,
+  skinTone: React.PropTypes.number,
+  recents: React.PropTypes.array,
+  recentsSize: React.PropTypes.number,
 };
 
 EmojiPane.defaultProps = {
   filter: '',
-  selectedCategory: 'recent',
   onSelected: () => null,
+  skinTone: 0,
+  recents: [],
+  recentsSize: 12,
 };
 
 export default EmojiPane;
