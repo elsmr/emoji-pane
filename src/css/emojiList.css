@@ -6,7 +6,6 @@
   height: inherit;
   overflow-y: auto;
   justify-content: flex-start;
-  margin: 0 auto;
 }
 
 .emoji-panel__list__message {

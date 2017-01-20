@@ -6,6 +6,7 @@ import CategoryList from './CategoryList';
 import CategorySwitcher from './CategorySwitcher';
 import { all, allByCat, categories } from '../data/emoji';
 import { matches, queue } from '../utils/emoji';
+import '../../node_modules/normalize.css/normalize.css';
 import '../css/emojiPane.css';
 
 class EmojiPane extends React.Component {
