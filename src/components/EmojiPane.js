@@ -29,17 +29,17 @@ class EmojiPane extends React.Component {
   componentDidMount() {
     Mousetrap.bind('right', this.selectNext);
     Mousetrap.bind('left', this.selectPrev);
-    Mousetrap.bind('enter', this.onSelected);
+    Mousetrap.bind('enter', () => { this.onSelected(); });
   }
 
   componentWillUnmount() {
     Mousetrap.reset();
   }
 
-  onSelected(emoji) {
-    const { results, selectedIndex, recents } = this.state;
+  onSelected(emoji = this.state.results[this.state.selectedIndex]) {
+    const { recents } = this.state;
     this.setState({ recents: queue(recents, this.props.recentsSize, emoji) });
-    this.props.onSelected(emoji || results[selectedIndex]);
+    this.props.onSelected(emoji);
   }
 
   onFilter(filter) {
@@ -53,8 +53,10 @@ class EmojiPane extends React.Component {
   }
 
   selectNext() {
+    const curr = this.state.selectedIndex;
+    const lastIndex = this.state.results.length - 1;
     this.setState({
-      selectedIndex: this.state.selectedIndex + 1,
+      selectedIndex: curr === lastIndex ? curr : curr + 1,
     });
   }
 
