@@ -1,7 +1,7 @@
 {
   "name": "emoji-pane",
   "version": "0.0.1",
-  "description": "An emoji keyboard for react",
+  "description": "An emoji keyboard for React",
   "main": "src/EmojiPane.js",
   "scripts": {
     "test": "jest",
