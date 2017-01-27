@@ -2,12 +2,33 @@
   font-size: 21px;
   display: block;
   font-family: "Apple Color Emoji", "Noto Color Emoji", "Segoe UI", "Segoe UI Emoji", "Segoe UI Symbol";
-  padding: 0.3em;
-  margin: 0.2em;
+  margin: 1%;
+  padding: 1%;
+  min-width: 1ch;
   overflow: hidden;
   transition: background-color 0.2s linear;
   border-radius: 0.4em;
   cursor: pointer;
+  flex-basis: 31%;
+  text-align: center;
+}
+
+@media (min-width: 12em) {
+  .emoji {
+    flex-basis: 23%;
+  }
+}
+
+@media (min-width: 14em) {
+  .emoji {
+    flex-basis: 18%;
+  }
+}
+
+@media (min-width: 16em) {
+  .emoji {
+    flex-basis: 14%;
+  }
 }
 
 .emoji:hover, .emoji--selected {
