@@ -8,7 +8,6 @@ import { all, allByCat, categories } from '../data/emoji';
 import { matches, queue } from '../utils/emoji';
 import '../../node_modules/normalize.css/normalize.css';
 import '../css/emojiPane.css';
-import Pane from '../../lib/EmojiPane';
 
 class EmojiPane extends React.Component {
   constructor(props) {
@@ -28,7 +27,6 @@ class EmojiPane extends React.Component {
   }
 
   componentDidMount() {
-    console.dir(Pane);
     Mousetrap.bind('right', this.selectNext);
     Mousetrap.bind('left', this.selectPrev);
     Mousetrap.bind('enter', () => { this.onSelected(); });
