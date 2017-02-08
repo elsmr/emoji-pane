@@ -9,6 +9,8 @@ import { matches, queue } from '../utils/emoji';
 import '../../node_modules/normalize.css/normalize.css';
 import '../css/emojiPane.css';
 
+// import { EmojiPane as Pane } from '../../lib/components/EmojiPane';
+
 class EmojiPane extends React.Component {
   constructor(props) {
     super(props);
