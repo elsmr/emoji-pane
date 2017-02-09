@@ -1,5 +1,4 @@
 import React from 'react';
-import '../css/categorySwitcher.css';
 
 const CategorySwitcher = ({ categories, recentsEnabled }) => (
   <div>

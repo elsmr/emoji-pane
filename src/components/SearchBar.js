@@ -1,5 +1,4 @@
 import React from 'react';
-import '../css/searchBar.css';
 
 const SearchBar = ({ filter, onFilter, onSelected }) => (
   <div className="search-bar">

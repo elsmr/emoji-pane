@@ -1,6 +1,5 @@
 import React from 'react';
 import Emoji from './Emoji';
-import '../css/emojiList.css';
 
 const EmojiList = ({ emojis, onSelected, selectedIndex, skinTone }) => (
   <div className="emoji-panel__list">

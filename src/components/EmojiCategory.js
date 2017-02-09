@@ -1,6 +1,5 @@
 import React from 'react';
 import EmojiList from './EmojiList';
-import '../css/emojiCategory.css';
 
 const EmojiCategory = ({ name, description, emojiByCategory, skinTone, onSelected }) => (
   <div className="category">

@@ -1,6 +1,5 @@
 import React from 'react';
 import EmojiList from './EmojiList';
-import '../css/SearchResults.css';
 
 const SearchResults = ({ selectedIndex, results, skinTone, onSelected }) => (
   <div className="emoji-pane__results">
