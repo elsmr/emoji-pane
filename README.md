@@ -7,6 +7,8 @@
 
 For an example of the emoji pane in action, go to http://eliasmei.re/emoji-pane/.
 
+![emoji-pane demo](https://raw.githubusercontent.com/eliasmeire/emoji-pane/master/emoji-pane.gif)
+
 ## Getting started
 
 ### Installing
@@ -19,7 +21,7 @@ For an example of the emoji pane in action, go to http://eliasmei.re/emoji-pane/
 import EmojiPane from 'emoji-pane';
 ```
 
-## Import CSS (optional)
+### Import CSS (optional)
 
 If you use Webpack with css loader:
 
@@ -34,23 +36,13 @@ Otherwise import it in your HTML `head` section.
 In your react component:
 
 ```js
-class MyComponent extends Component {
-    render() {
-        return (
-            <div>
-                ...
-                <EmojiPane
-                    filter="leaf"
-                    onSelected={logEmoji}
-                    recents={recents}
-                    recentsSize={12}
-                    skinTone={4}
-                />
-                ...
-            </div>
-        );
-    }
-}
+<EmojiPane
+    filter="leaf"
+    onSelected={logEmoji}
+    recents={recents}
+    recentsSize={12}
+    skinTone={4}
+/>
 ```
 
 ## API
