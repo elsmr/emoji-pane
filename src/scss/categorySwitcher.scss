@@ -1,5 +1,7 @@
+@import '_variables';
+
 .category-switcher {
-  border-top: 1px solid rgba(0,0,0,0.2);
+  border-top: 1px solid $light-gray-2;
   padding-top: 0.5em;
   list-style: none;
   display: flex;
@@ -8,7 +10,7 @@
 }
 
 .category-switcher__item {
-  font-family: "Apple Color Emoji", "Noto Color Emoji", "Segoe UI", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: $emoji-font-stack;
   padding: 0.3em;
   transition: background-color 0.2s linear;
   border-radius: 1em;
@@ -17,9 +19,9 @@
 }
 
 .category-switcher__item:hover {
-  background-color: rgba(0,0,0,0.1);
+  background-color: $light-gray-1;
 }
 
 .category-switcher__item--selected {
-  background-color: rgba(0,0,0,0.3);
+  background-color: $light-gray-3;
 }

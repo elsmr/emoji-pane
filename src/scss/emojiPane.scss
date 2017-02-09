@@ -1,3 +1,5 @@
+@import '_variables';
+
 a {
   color: initial;
   text-decoration: none;
@@ -10,7 +12,7 @@ a {
 }
 
 .emoji-pane {
-  font-family: -apple-system, BlinkMacSystemFont, Ubuntu, Cantarell, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-family: $text-font-stack;
   padding: 1em;
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   border: 1px solid rgba(0,0,0,0.12);

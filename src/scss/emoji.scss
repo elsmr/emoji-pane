@@ -1,16 +1,19 @@
+@import '_variables';
+
 .emoji {
-  font-size: 21px;
-  display: block;
-  font-family: "Apple Color Emoji", "Noto Color Emoji", "Segoe UI", "Segoe UI Emoji", "Segoe UI Symbol";
-  margin: 2% 1%;
-  padding: 1%;
+  font-size: $emoji-font-size;
+  display: flex;
+  font-family: $emoji-font-stack;
+  margin: 0.2em 0.1em;
+  padding: 0.2em;
   min-width: 1ch;
+  min-height: 1ch;
   overflow: hidden;
   transition: background-color 0.2s linear;
   border-radius: 0.4em;
   cursor: pointer;
   flex-basis: 31%;
-  text-align: center;
+  justify-content: center;
 }
 
 @media (min-width: 12em) {
@@ -32,5 +35,5 @@
 }
 
 .emoji:hover, .emoji--selected {
-  background-color: rgba(0,0,0,0.2);
+  background-color: $light-gray-1;
 }
