@@ -2,10 +2,11 @@
 
 [![Dependencies](https://david-dm.org/eliasmeire/emoji-pane.svg)](https://david-dm.org/eliasmeire/emoji-pane.svg)
 [![Build Status](https://travis-ci.org/eliasmeire/emoji-pane.svg?branch=master)](https://travis-ci.org/eliasmeire/emoji-pane)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 > An emoji keyboard for React
 
 For an example of the emoji pane in action, go to http://eliasmei.re/emoji-pane/.
+
+![emoji-pane demo](https://raw.githubusercontent.com/eliasmeire/emoji-pane/master/emoji-pane.gif)
 
 ## Getting started
 
@@ -19,7 +20,7 @@ For an example of the emoji pane in action, go to http://eliasmei.re/emoji-pane/
 import EmojiPane from 'emoji-pane';
 ```
 
-## Import CSS (optional)
+### Import CSS (optional)
 
 If you use Webpack with css loader:
 
@@ -34,23 +35,13 @@ Otherwise import it in your HTML `head` section.
 In your react component:
 
 ```js
-class MyComponent extends Component {
-    render() {
-        return (
-            <div>
-                ...
-                <EmojiPane
-                    filter="leaf"
-                    onSelected={logEmoji}
-                    recents={recents}
-                    recentsSize={12}
-                    skinTone={4}
-                />
-                ...
-            </div>
-        );
-    }
-}
+<EmojiPane
+    filter="leaf"
+    onSelected={logEmoji}
+    recents={recents}
+    recentsSize={12}
+    skinTone={4}
+/>
 ```
 
 ## API
