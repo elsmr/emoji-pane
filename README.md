@@ -16,8 +16,18 @@ For an example of the emoji pane in action, go to http://eliasmei.re/emoji-pane/
 ### Import component
 
 ```js
-import { EmojiPane } from 'emoji-pane';
+import EmojiPane from 'emoji-pane';
 ```
+
+## Import CSS (optional)
+
+If you use Webpack with css loader:
+
+```js
+import 'emoji-pane/dist/css/emojiPane.css';
+```
+
+Otherwise import it in your HTML `head` section.
 
 ### Example usage
 
