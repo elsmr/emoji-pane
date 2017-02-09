@@ -1,11 +1,15 @@
 {
   "name": "emoji-pane",
-  "version": "0.0.3",
+  "version": "0.0.15",
   "description": "An emoji keyboard for React",
-  "main": "src/EmojiPane.js",
+  "main": "dist/index.js",
   "scripts": {
+    "clean": "rimraf dist",
     "test": "jest",
     "lint": "eslint --ext .js,.jsx src test",
+    "build": "npm run clean && npm run build:js && npm run build:css",
+    "build:js": "babel src -d dist --copy-files --minified --ignore \"__tests__\"",
+    "build:css": "node-sass src/scss/main.scss dist/css/emojiPane.css",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "deploy-storybook": "gh-pages-travis"
@@ -32,6 +36,7 @@
   "homepage": "https://github.com/eliasmeire/emoji-pane#readme",
   "devDependencies": {
     "@kadira/storybook": "^2.35.3",
+    "babel-cli": "^6.22.2",
     "babel-core": "^6.22.1",
     "babel-jest": "^18.0.0",
     "babel-loader": "^6.2.10",
@@ -48,8 +53,13 @@
     "gh-pages-travis": "^1.0.4",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^18.1.0",
+    "node-sass": "^4.5.0",
+    "raw-loader": "^0.5.1",
     "react-addons-test-utils": "^15.4.2",
     "react-test-renderer": "^15.4.2",
+    "rimraf": "^2.5.4",
+    "sass-loader": "^5.0.1",
+    "style-loader": "^0.13.1",
     "webpack": "^2.2.1"
   },
   "dependencies": {
